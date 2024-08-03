@@ -1,0 +1,18 @@
+button{
+    font-size: 30px;
+    padding: 5px 20px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    height: 200px;
+    gap: 15px;
+}
+h2{
+    text-align: center;
+}
+button:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
