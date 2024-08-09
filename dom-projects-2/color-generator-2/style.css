@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+.change-btn{
+    padding: 10px 16px;
+    margin-top: 20px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.change-btn:hover {
+	background-color: #fff;
+	color: #000;
+	border: 1px solid #000;
+}
+input{
+    padding: 5px 10px;
+}
+.flex{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    /* height: 15px; */
+}
+.copy-btn{
+    height: 29px;
+}
+
+.tost-message{
+    position: fixed;
+    top: 2rem;
+    background-color: rgba(19, 201, 110, 0.897);
+    color: #fff;
+    right: 1rem;
+    padding: 8px 12px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.tost-message-in{
+    animation: tost-animation-in 0.5s ease-in;
+}
+.tost-message-out{
+    animation: tost-animation-out 0.5s ease-in;
+}
+
+@keyframes tost-animation-in{
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tost-animation-out{
+    from{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(200px);
+        opacity: 10;
+    }
+}
