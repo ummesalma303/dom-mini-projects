@@ -10,6 +10,7 @@ function main() {
     const input = document.querySelector('.input')
     const input2 = document.querySelector('.input-2')
     const copyBtn = document.querySelector('.copy-btn')
+    const copyBtn2 = document.querySelector('.copy-btn-2')
     
     changeBtn.addEventListener('click',()=>{
         let color = generatorColorDecimal()
@@ -36,12 +37,31 @@ function main() {
         }
     });
 
+
+    
+    copyBtn2.addEventListener('click',function () {
+        navigator.clipboard.writeText(input2.value);
+
+        if (div !== null) {
+            div.remove();
+            div = null;
+        }
+
+        if (isValidHex(input.value)) {
+        generateTostMessage(`${input2.value} copied`)
+        }
+        else{
+            alert('Invalid color code')
+        }
+    });
+
     input.addEventListener('keyup',function(e) {
        const color = e.target.value;
        if (color) {
         input.value = color.toUpperCase()
         if (isValidHex(color)) {
          container.style.backgroundColor = `#${color}`;
+         input2.value = hexToRgb(color);
         } 
        }
     })
@@ -74,7 +94,6 @@ function isValidHex(color) {
 }
 
 
-
 function generatorColorDecimal() {
     red = Math.floor(Math.random()*255);
     green = Math.floor(Math.random()*255);
@@ -100,3 +119,17 @@ function colorGenerator({red,green,blue}) {
 function generateRgbColor({red,green,blue}) {
     return `rgb(${red},${green},${blue})`
 }
+
+// convert hex to rgb 
+/**
+ * 
+ * @param {string} hex 
+ */
+function hexToRgb(hex) {
+    const red = parseInt(hex.slice(0,2),16);
+    const green = parseInt(hex.slice(2,4),16);
+    const blue = parseInt( hex.slice(4),16);
+    return `rgb(${red},${green},${blue})`
+}
+
+// console.log(hexToRgb('ffffff') );
