@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-    <input type="file" accept="image/*">
-    <button>choose file</button>
-    <P></P>
+    <div class="container">
+       <div class="img-container">
+        <img src="./images/image-4.jpeg" alt="" class="slide">
+        <img src="./images/image-1.avif" alt="" class="slide">
+        <img src="./images/image-5.jpeg" alt="" class="slide">
+        <img src="./images/image-2.webp" alt="" class="slide">
+        <img src="./images/image-3.webp" alt="" class="slide">
+       </div>
+        <div class="controls">
+            <button onclick="perviousSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
