@@ -67,7 +67,7 @@
     background: yellow;
     font-size: 20px;
     padding: 15px;
-    color: black;
+    color: #fff;
 }
 @media screen and (max-width:669px) {
     .rinterio-title{
