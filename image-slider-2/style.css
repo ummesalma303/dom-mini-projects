@@ -3,3 +3,24 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(24, 24, 170, 0.199);
+}
+.slider-image-container{
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+    border: 5px solid red;
+}
+.slider-image-container img{
+}
+.slider{
+    /* width: 1000px; */
+   min-width: 100%;
+}

@@ -92,6 +92,12 @@ function generateTostMessage(msg) {
     })
 }
 
+
+
+function uodateColorCode(color) {
+    
+}
+
 // utility's functions
 
 
@@ -104,11 +110,11 @@ function generateTostMessage(msg) {
 
 
 /**
- * 
+ * convert hex color to rgb
  * @returns 
  */
 
-function generatorColorDecimal() {
+function hexToDecimal() {
     red = Math.floor(Math.random()*255);
     green = Math.floor(Math.random()*255);
     blue = Math.floor(Math.random()*255);

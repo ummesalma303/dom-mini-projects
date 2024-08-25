@@ -20,14 +20,28 @@ body{
 	align-items: center;
     text-align: center;
 }
+.input{
+    width: 230px;
+    height: 40px;
+    padding: 10px;
+    font-size: 20px;
+}
+.copy-btn{
+    padding: 10px  10px;
+    font-weight: bolder;
+    font-size: 16px;
+}
 .change-btn{
    padding: 5px 10px;
    border: 1px solid #fff;
-   margin-top: 30px;
+   /* margin-top: 10px; */
    background: none;
    color: #fff;
 }
 .change-btn:hover{
     background-color: #fff;
     color: #000;
+}
+.flex{
+    margin: 20px 0;
 }
