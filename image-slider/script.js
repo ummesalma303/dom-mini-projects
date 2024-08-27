@@ -12,7 +12,7 @@ function showSlide(index) {
     else{
         currentIndex = index;
     }
-    imageContainer.style.transform = `translate( ${-currentIndex*100}%)`;
+    imageContainer.transform = `translate( ${-currentIndex*100}%)`;
 }
 
 function perviousSlide() {
